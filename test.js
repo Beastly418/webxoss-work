@@ -73,6 +73,7 @@ if (getArg('key')) {
 var io = require('socket.io')(gameServer, {
   pingTimeout: 30000,
   maxHttpBufferSize: 1024 * 1024,
+  cors : {origin:'*'}
 });
 gameServer.listen(2015);
 
